@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  main {
+    width: 100%;
+    height: 100%;
+    padding: 5vw;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: white;
+
+    @keyframes appear {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes move-left {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: -55%;
+      }
+    }
+
+    @keyframes move-right {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: 55%;
+      }
+    }
+
+    @keyframes move-lback {
+      0% {
+        margin-left: -55%;
+      }
+      100% {
+        margin-left: 0;
+      }
+    }
+
+    @keyframes move-rback {
+      0% {
+        margin-left: 55;
+      }
+      100% {
+        margin-left: 0;
+      }
+    }
+
+    .move-lback {
+      animation: move-lback 0.5s ease-in;
+      margin-left: 0%;
+    }
+
+    .move-rback {
+      animation: move-rback 0.5s ease-in;
+      margin-left: 0%;
+    }
+
+    .move-left {
+      animation: move-left 0.5s ease-in;
+      margin-left: -55%;
+    }
+
+    .move-right {
+      animation: move-right 0.5s ease-in;
+      margin-left: 55%;
+    }
+
+    .image {
+      position: relative;
+      width: 50%;
+      height: 30vw;
+      background-image: url("example.png");
+      background-position: top center;
+      background-size: cover;
+      margin-top: 14.5%;
+      border-radius: 0.5vw;
+      z-index: 5;
+    }
+
+    .description {
+      position: relative;
+      width: 50%;
+      height: 30vw;
+      // border: 0.1vw solid white;
+      // background-color: red;
+      border-radius: 0.5vw;
+      display: grid;
+      place-items: center;
+      // animation: appear 0.5s ease-in;
+      margin-top: -60%;
+      p {
+        padding: 5vw;
+        color: white;
+        font-size: 1.3vw;
+        line-height: 2.2vw;
+      }
+    }
+  }
+}
